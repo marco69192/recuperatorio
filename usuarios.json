@@ -1,16 +1,17 @@
 [
-    {
+  {
       "usuario": "admin",
-      "contraseña": "admin123"
-    },
-    {
+      "contraseña": "admin123",
+      "tipo": "Administrador"
+  },
+  {
       "usuario": "cliente",
-      "contraseña": "cliente1"
-    },
-    {
-        "usuario": "invitado",
-        "contraseña": "invitado1"   
-    }
-    
-  ]
-  
+      "contraseña": "cliente1",
+      "tipo": "Cliente"
+  },
+  {
+      "usuario": "invitado",
+      "contraseña": "invitado1",
+      "tipo": "Invitado"
+  }
+]
