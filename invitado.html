@@ -14,15 +14,14 @@
                 <button class="btn btn-danger btn-sm" onclick="cerrarSesion()">Cerrar Sesión</button>
             </div>
             <div class="card-body">
-                <!-- Información del usuario -->
+        
                 <p><strong>Nombre de Usuario:</strong> <span id="nombreUsuario"></span></p>
                 <p><strong>Tipo de Usuario:</strong> <span id="tipoUsuario"></span></p>
 
-                <!-- Opciones del usuario -->
                 <div class="mt-4" id="opcionesPerfil">
                     <h5>Gestionar Perfil:</h5>
                     <ul class="list-group" id="menuOpciones">
-                        <!-- Opciones serán añadidas dinámicamente -->
+                    
                     </ul>
                 </div>
             </div>
@@ -31,36 +30,34 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Simulación de datos de usuarios
+
         const user = {
             nombre: "Juan Pérez",
-            tipoUsuario: "Invitado", // Cambiar a "Cliente" para probar comportamiento diferente
+            tipoUsuario: "Invitado", 
             email: "juan.perez@example.com",
             telefono: "71652322",
             direccion: "Avenida murillo456, Ciudad potosi"
         };
 
-        // Mostrar datos al cargar la página
+       
         window.onload = () => {
             document.getElementById("nombreUsuario").innerText = user.nombre;
             document.getElementById("tipoUsuario").innerText = user.tipoUsuario;
 
-            // Configurar menú según el tipo de usuario
+     
             configurarMenu();
         };
 
-        // Función para configurar el menú de opciones según el tipo de usuario
         function configurarMenu() {
             const menuOpciones = document.getElementById("menuOpciones");
-            menuOpciones.innerHTML = ""; // Limpiar opciones previas
+            menuOpciones.innerHTML = ""; 
 
-            // Opción para ver perfil (común a todos)
+          
             const verPerfilItem = document.createElement("li");
             verPerfilItem.className = "list-group-item";
             verPerfilItem.innerHTML = <a href="#verPerfil" onclick="verPerfil()">Ver Perfil</a>;
             menuOpciones.appendChild(verPerfilItem);
 
-            // Opciones adicionales según el tipo de usuario
             if (user.tipoUsuario === "Cliente") {
                 const editarPerfilItem = document.createElement("li");
                 editarPerfilItem.className = "list-group-item";
@@ -84,7 +81,7 @@
             }
         }
 
-        // Funciones de gestión del perfil
+
         function verPerfil() {
             alert(`
 Nombre: ${user.nombre}
@@ -119,8 +116,6 @@ Dirección: ${user.direccion}
                 alert("Contraseña actualizada correctamente.");
             }
         }
-
-        // Función para cerrar sesión
         function cerrarSesion() {
             alert("Sesión cerrada correctamente.");
             localStorage.clear();
