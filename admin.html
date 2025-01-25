@@ -8,17 +8,41 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Simulación de datos de usuario
+    // Simulación de datos de usuario y formularios de envío
     const user = {
       nombre: "Admin",
       tipoUsuario: "Administrador"
     };
 
-    // Mostrar datos del usuario al cargar la página
+    // Simulación de consultas/enviados (puedes reemplazar estos datos con los que provengan de tu base de datos o API)
+    const consultas = [
+      { id: 1, nombre: "Juan Pérez", email: "juan@example.com", consulta: "consulta evento retrasado", fecha: "2025-01-20" },
+      { id: 2, nombre: "María López", email: "maria@example.com", consulta: "Consulta fecha de evento", fecha: "2025-01-21" },
+      { id: 3, nombre: "Carlos García", email: "carlos@example.com", consulta: "consulta costo del evento", fecha: "2025-01-22" }
+    ];
+
+    // Mostrar datos del usuario y consultas al cargar la página
     window.onload = () => {
       document.getElementById("nombreUsuario").innerText = user.nombre;
       document.getElementById("tipoUsuario").innerText = user.tipoUsuario;
+      mostrarConsultas();
     };
+
+    // Función para mostrar las consultas
+    function mostrarConsultas() {
+      const tablaConsultas = document.getElementById("tablaConsultas");
+      consultas.forEach(consulta => {
+        const fila = document.createElement("tr");
+        fila.innerHTML = `
+          <td>${consulta.id}</td>
+          <td>${consulta.nombre}</td>
+          <td>${consulta.email}</td>
+          <td>${consulta.consulta}</td>
+          <td>${consulta.fecha}</td>
+        `;
+        tablaConsultas.appendChild(fila);
+      });
+    }
 
     // Función para cerrar sesión
     function cerrarSesion() {
@@ -41,6 +65,29 @@
         <p><strong>Nombre de Usuario:</strong> <span id="nombreUsuario"></span></p>
         <p><strong>Tipo de Usuario:</strong> <span id="tipoUsuario"></span></p>
         <button class="btn btn-danger" onclick="cerrarSesion()">Cerrar Sesión</button>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-header bg-success text-white">
+        <h4>Consultas/Eventos de Usuarios</h4>
+      </div>
+      <div class="card-body">
+        <!-- Tabla para mostrar consultas/enviados -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Evento</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="tablaConsultas">
+            <!-- Las filas se añadirán aquí dinámicamente -->
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
