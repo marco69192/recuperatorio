@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial Interactivo Evento Social</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .step-container {
+      margin-top: 50px;
+      display: none;
+    }
+
+    .step-container.active {
+      display: block;
+    }
+
+    .step-button {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .step-button:hover {
+      background-color: #218838;
+    }
+
+    .step-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .step-description {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    .step-info {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .step-footer {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="text-center mb-4" style="color: blueviolet; font-weight: bold; font-size: 80px; text-align: center;">Tutorial Interactivo - Evento Social</h1>
+
+    
+    <div class="step-container active" id="step-1">
+      <div class="step-title" style="color: blueviolet";>¡Bienvenido al Evento Social!</div>
+      <div class="step-description">
+        Este es un tutorial interactivo para guiarte a través de los detalles del evento.
+        ¡Vamos a empezar!
+      </div>
+      <div class="step-footer text-center">
+        <button class="btn step-button" id="next-step-1">Siguiente</button>
+      </div>
+    </div>
+
+    
+    <div class="step-container" id="step-2">
+      <div class="step-title" style="color: blueviolet";>Información del Evento</div>
+      <div class="step-description">
+        <strong>Nombre del Evento:</strong> Fiesta de Bienvenida 2025
+      </div>
+      <div class="step-description">
+        <strong>Fecha:</strong> 1 de febrero, 2025
+      </div>
+      <div class="step-description">
+        <strong>Ubicación:</strong> Hotel Riviera, Ciudad de La Paz
+      </div>
+      <div class="step-footer text-center">
+        <button class="btn step-button" id="next-step-2">Siguiente</button>
+      </div>
+    </div>
+
+    
+    <div class="step-container" id="step-3">
+      <div class="step-title" style="color: blueviolet";>Agenda del Evento</div>
+      <div class="step-info">
+        7:00 PM - Registro y Cocteles de Bienvenida
+        <br>
+        8:00 PM - Cena Formal
+        <br>
+        9:30 PM - Actividades de Entretenimiento
+        <br>
+        11:00 PM - Baile y Música en Vivo
+        <br>
+        1:00 AM - Cierre del Evento
+      </div>
+      <div class="step-footer text-center">
+        <button class="btn step-button" id="next-step-3">Siguiente</button>
+      </div>
+    </div>
+
+    
+    <div class="step-container" id="step-4">
+      <div class="step-title" style="color: blueviolet";>Confirmación</div>
+      <div class="step-description">
+        ¡Gracias por unirte al evento! Recuerda revisar tu correo para más detalles.
+      </div>
+      <div class="step-footer text-center">
+        <button class="btn step-button" id="finish-tutorial">Finalizar Tutorial</button>
+      </div>
+    </div>
+
+  </div>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    
+    function changeStep(step) {
+      for (let i = 1; i <= totalSteps; i++) {
+        document.getElementById(`step-${i}`).classList.remove('active');
+      }
+      document.getElementById(`step-${step}`).classList.add('active');
+      currentStep = step;
+    }
+
+    
+    document.getElementById('next-step-1').addEventListener('click', () => changeStep(2));
+    document.getElementById('next-step-2').addEventListener('click', () => changeStep(3));
+    document.getElementById('next-step-3').addEventListener('click', () => changeStep(4));
+    document.getElementById('finish-tutorial').addEventListener('click', () => alert('¡Tutorial Finalizado!'));
+  </script>
+
+</body>
+</html>

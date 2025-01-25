@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <nombre>Inicio</nombre>
+        <link>index.html</link>
+    </item>
+    <item>
+        <nombre>Participar</nombre>
+        <link>participar.html</link>
+        <subitem>
+            <nombre>Seleccion de Tematica</nombre>
+            <link>tematica.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Formulario de Preferencias</nombre>
+            <link>preferencias.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Confirmacion de Respuestas</nombre>
+            <link>respuestas.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Descarga de Resultados</nombre>
+            <link>resultados.html</link>
+        </subitem>
+     </item>
+
+     <item>
+        <nombre>Resultados Globales</nombre>
+        <link>resultados.html</link>
+        <subitem>
+            <nombre>Tendencia Principales</nombre>
+            <link>tendencias.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Graficos y Estadisticas</nombre>
+            <link>estadisticas.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Comparacion por Categorias</nombre>
+            <link>categorias.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Resusmen Descargable</nombre>
+            <link>descargable.html</link>
+        </subitem>
+     </item>
+
+     <item>
+        <nombre>Ideas y Recursos</nombre>
+        <link>recursos.html</link>
+        <subitem>
+            <nombre>Sugerencias de Actividades</nombre>
+            <link>actividades.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Temas Populares</nombre>
+            <link>populares.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Lugares Recomendados</nombre>
+            <link>lugares.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Servicios de Catering</nombre>
+            <link>catering.html</link>
+        </subitem>
+     </item>
+
+     <item>
+        <nombre>Foro de Discusion</nombre>
+        <link>foro.html</link>
+        <subitem>
+            <nombre>Propuestas de Usuarios</nombre>
+            <link>propuestas.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Encuentros Locales</nombre>
+            <link>locales.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Galeria de Eventos Pasados</nombre>
+            <link>galeria.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Redes Sociales del Proyecto</nombre>
+            <link>redes.html</link>
+        </subitem>
+     </item>
+
+     <item>
+        <nombre>Herramientas Extras</nombre>
+        <link>herramientas.html</link>
+        <subitem>
+            <nombre>Calculador de Presupuesto</nombre>
+            <link>calculador.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Agenda de Eventos</nombre>
+            <link>agenda.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Plantillas Descargables</nombre>
+            <link>plantillas.html</link>
+        </subitem>
+        <subitem>
+            <nombre>Tutoriales Interactivos</nombre>
+            <link>tutoriales.html</link>
+        </subitem>
+     </item>
+   
+</menu>

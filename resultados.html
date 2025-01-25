@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Eventos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4" style="color: blueviolet; font-weight: bold; font-size: 80px;">Lista de Resultados</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Evento</th>
+          <th scope="col">Tematica</th>
+          <th scope="col">Confirmacion</th>
+        </tr>
+      </thead>
+      <tbody id="eventosLista">
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-between mt-4">
+      <button id="descargarBtn" class="btn btn-danger">Descargar Resultados</button>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      const eventos = [
+        { "nombre": "Juan", "apellido": "Pérez", "evento": "Boda", "tematica": "Elegante", "confirmacion": "confirmo." },
+        { "nombre": "María", "apellido": "López", "evento": "Cumpleaños", "tematica": "Casual", "confirmacion": "confirmo." },
+        { "nombre": "Carlos", "apellido": "García", "evento": "Corporativo", "tematica": "Bintage", "confirmacion": "confirmo." }
+      ];
+
+      const eventosLista = document.getElementById('eventosLista');
+
+      eventos.forEach(evento => {
+        const fila = document.createElement('tr');
+
+        fila.innerHTML = `
+          <td>${evento.nombre}</td>
+          <td>${evento.apellido}</td>
+          <td>${evento.evento}</td>
+          <td>${evento.tematica}</td>       
+          <td>${evento.confirmacion}</td>  
+        `;
+
+        eventosLista.appendChild(fila);
+      });
+
+      document.getElementById('confirmarBtn').addEventListener('click', function() {
+        alert('Confirmación realizada exitosamente.');
+      });
+
+      document.getElementById('descargarBtn').addEventListener('click', function() {
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(eventos, null, 2));
+        const downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute("download", "eventos.json");
+        document.body.appendChild(downloadAnchorNode);
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+      });
+    });
+  </script>
+</body>
+</html>

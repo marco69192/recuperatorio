@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Eventos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4" style="color: blueviolet; font-weight: bold; font-size: 80px;">Confirmación de Respuestas</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Evento</th>
+          <th scope="col">Temática</th>
+          <th scope="col">Acción</th>
+        </tr>
+      </thead>
+      <tbody id="eventosLista">
+      </tbody>
+    </table>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const eventos = [
+        { "nombre": "Juan", "apellido": "Pérez", "evento": "Boda", "tematica": "Elegante" },
+        { "nombre": "María", "apellido": "López", "evento": "Cumpleaños", "tematica": "Casual" },
+        { "nombre": "Carlos", "apellido": "García", "evento": "Corporativo", "tematica": "Vintage" }
+      ];
+
+      const eventosLista = document.getElementById('eventosLista');
+
+      eventos.forEach((evento, index) => {
+        const fila = document.createElement('tr');
+        fila.innerHTML = `
+          <td>${evento.nombre}</td>
+          <td>${evento.apellido}</td>
+          <td>${evento.evento}</td>
+          <td>${evento.tematica}</td>
+          <td id="accion-${index}">
+            <button class="btn btn-primary confirmarBtn">Confirmar</button>
+          </td>
+        `;
+        eventosLista.appendChild(fila);
+      });
+
+      document.querySelectorAll('.confirmarBtn').forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+          const accionCelda = document.getElementById(`accion-${index}`);
+          accionCelda.innerHTML = `<span class="text-success fw-bold">✔ Confirmado</span>`;
+        });
+      });
+      
+    });
+  </script>
+</body>
+</html>

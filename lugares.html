@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lugares Recomendados para un Evento Social</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .place-card {
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .place-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .place-card-img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .place-card-body {
+      padding: 20px;
+    }
+
+    .place-card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .place-card-description {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .title-section {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-5 title-section" style="color: blueviolet; font-weight: bold; font-size: 80px; text-align: center;">Lugares Recomendados para un Evento Social</h1>
+
+    <div class="row">
+    
+      <div class="col-md-4">
+        <div class="card place-card">
+          <img src="imagenes/playa.jpg" class="card-img-top place-card-img" alt="Playa">
+          <div class="card-body text-center">
+            <h5 class="place-card-title" style="color: blueviolet";>Playa</h5>
+            <p class="place-card-description">Un ambiente relajado y único para eventos al aire libre. Ideal para bodas, fiestas y eventos informales.</p>
+            <ul>
+              <li>Ubicación: Costas</li>
+              <li>Capacidad: Hasta 200 personas</li>
+              <li>Ideal para: Bodas, Fiestas de Verano</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="card place-card">
+          <img src="imagenes/hotel.jpg" class="card-img-top place-card-img" alt="Hotel de Lujo">
+          <div class="card-body text-center">
+            <h5 class="place-card-title" style="color: blueviolet";>Hotel de Lujo</h5>
+            <p class="place-card-description">Un lugar elegante y sofisticado para eventos formales, como cenas de gala, conferencias o lanzamientos de productos.</p>
+            <ul>
+              <li>Ubicación: Ciudad</li>
+              <li>Capacidad: Hasta 500 personas</li>
+              <li>Ideal para: Galas, Conferencias</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="card place-card">
+          <img src="imagenes/jardin.jpg" class="card-img-top place-card-img" alt="Jardín Botánico">
+          <div class="card-body text-center">
+            <h5 class="place-card-title" style="color: blueviolet";>Jardín Botánico</h5>
+            <p class="place-card-description">Un entorno natural y fresco para eventos al aire libre. Perfecto para bodas, celebraciones o eventos ecológicos.</p>
+            <ul>
+              <li>Ubicación: Exterior, Áreas verdes</li>
+              <li>Capacidad: Hasta 150 personas</li>
+              <li>Ideal para: Bodas, Eventos Ecológicos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="row">
+     
+      <div class="col-md-4">
+        <div class="card place-card">
+          <img src="imagenes/restaurante.jpg" class="card-img-top place-card-img" alt="Restaurante Gourmet">
+          <div class="card-body text-center">
+            <h5 class="place-card-title" style="color: blueviolet";>Restaurante Gourmet</h5>
+            <p class="place-card-description">Un espacio sofisticado para cenas y reuniones, con un servicio gastronómico de alta calidad.</p>
+            <ul>
+              <li>Ubicación: Ciudad</li>
+              <li>Capacidad: Hasta 100 personas</li>
+              <li>Ideal para: Reuniones Privadas, Almuerzos de Negocios</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="card place-card">
+          <img src="imagenes/convenciones.jpg" class="card-img-top place-card-img" alt="Centro de Convenciones">
+          <div class="card-body text-center">
+            <h5 class="place-card-title" style="color: blueviolet";>Centro de Convenciones</h5>
+            <p class="place-card-description">Un lugar amplio y moderno ideal para eventos grandes como exposiciones, conferencias y congresos.</p>
+            <ul>
+              <li>Ubicación: Ciudad</li>
+              <li>Capacidad: Hasta 1000 personas</li>
+              <li>Ideal para: Congresos, Exposiciones</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="card place-card">
+          <img src="imagenes/viñedos.jpg" class="card-img-top place-card-img" alt="Viñedo">
+          <div class="card-body text-center">
+            <h5 class="place-card-title" style="color: blueviolet";>Viñedo</h5>
+            <p class="place-card-description">Un lugar perfecto para eventos al aire libre con un ambiente relajado y sofisticado, ideal para bodas y catas de vino.</p>
+            <ul>
+              <li>Ubicación: Áreas rurales</li>
+              <li>Capacidad: Hasta 300 personas</li>
+              <li>Ideal para: Bodas, Catas de Vino</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
